@@ -18,17 +18,20 @@ hr {
 .user > .time {
   color: #bababa;
 }
-
+.name-div .typing {
+  color: rgb(61, 218, 61);
+}
 img {
   width: 20px;
 }
-.user-img,
+
+/* .user-img,
 .email-icon,
 .more-icon,
 .search-icon,
 .usr-img {
   width: 20px;
-}
+} */
 
 body {
   height: 100vh;
@@ -39,6 +42,8 @@ body {
     #d4dbd9 20%,
     #d4dbd9 100%
   );
+  font-family: "Open Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .container {
@@ -83,12 +88,13 @@ input {
 }
 
 .user-img {
-  width: 50px;
+  min-width: 50px;
+  height: 50px;
   border-radius: 50%;
 }
 
 .left .search {
-  background: #f6f6f6;
+  background: #fafafa;
   padding: 10px;
 }
 .left .search .input-search {
@@ -118,7 +124,7 @@ input {
   height: 70px;
 }
 
-.left .chat .user2 {
+.left .chat .user1 {
   background: #ebebeb;
 }
 
@@ -136,7 +142,7 @@ input {
 }
 
 /* endblock */
-.left .chat .user .usr-img {
+.left .chat .user .usr-img-container .usr-img {
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -162,6 +168,7 @@ input {
 
 .right .top-profile-bar .profile-details .profile-user {
   width: 50px;
+  height: 50px;
   border-radius: 50%;
   margin-right: 10px;
 }
@@ -177,6 +184,9 @@ input {
   background: #f0f0f0;
   display: flex;
   padding: 10px;
+}
+.right .chat-input-right .attach {
+  margin-left: 10px;
 }
 .right .enter-msg {
   margin: 0px 10px;
@@ -199,6 +209,15 @@ input {
 }
 .right .chat-details .received-msg {
   margin-right: auto;
+}
+
+img:hover {
+  cursor: pointer;
+}
+
+.left .chat .user:hover {
+  cursor: pointer;
+  background: #f0f0f0;
 }
 
 @media (max-width: 400px) {
