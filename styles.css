@@ -3,7 +3,14 @@
   margin: 0px;
   box-sizing: border-box;
 }
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background: #bababa;
+}
 /* icons : #919191 */
+
 hr {
   border: 1px solid #f3f3f3;
 }
@@ -11,11 +18,7 @@ hr {
 .user > .time {
   color: #bababa;
 }
-/* .search-icon,
-.input-search {
-  margin: 9px 5px;
-  margin-right: 50px;
-} */
+
 img {
   width: 20px;
 }
@@ -29,7 +32,13 @@ img {
 
 body {
   height: 100vh;
-  background: rgb(128, 224, 133);
+  background: linear-gradient(
+    to bottom,
+    #009688 0%,
+    #009688 20%,
+    #d4dbd9 20%,
+    #d4dbd9 100%
+  );
 }
 
 .container {
@@ -37,8 +46,8 @@ body {
   left: 50%;
   top: 50%;
   background: lightpink;
-  height: 80%;
-  width: 70%;
+  height: 95%;
+  width: 90%;
   transform: translate(-50%, -50%);
   display: flex;
   /* overflow: hidden; */
@@ -50,7 +59,7 @@ body {
   flex-direction: column;
 }
 .right {
-  flex: 1;
+  flex: 2;
   display: flex;
   flex-direction: column;
 }
@@ -108,6 +117,11 @@ input {
   background: #ffffff;
   height: 70px;
 }
+
+.left .chat .user2 {
+  background: #ebebeb;
+}
+
 /* block */
 .name-div {
   /* background: red; */
@@ -185,4 +199,18 @@ input {
 }
 .right .chat-details .received-msg {
   margin-right: auto;
+}
+
+@media (max-width: 400px) {
+  .container {
+    display: none;
+  }
+  body::after {
+    content: "Your device can't display this content due to the decreased display size";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+  }
 }
